@@ -165,7 +165,7 @@ class PhoneInput extends React.Component {
 
     onEnterKeyPress: null, // null or function
 
-    onButtonClick: onEnterKeyPress,
+    onButtonClick: null,
 
     keys: {
       UP: 38,
