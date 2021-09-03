@@ -711,8 +711,8 @@ class PhoneInput extends React.Component {
     e.target.setSelectionRange(0, len);
   };
 
-  handleCtaButtonClick = (e) => {
-    if (this.props.onButtonClick) this.props.onButtonClick(e);
+  handleCtaButtonClick = () => {
+    if (this.props.onButtonClick) this.props.onButtonClick();
   };
 
   handleFlagItemClick = (country, e) => {
