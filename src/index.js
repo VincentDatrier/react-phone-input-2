@@ -1270,8 +1270,8 @@ class PhoneInput extends React.Component {
         {showCtaButton && (
           <div className={ctaButtonClasses}>
             <button
-              aria-disabled={!isValid}
-              disabled={!isValid}
+              aria-disabled={!isValidValue}
+              disabled={!isValidValue}
               style={this.props.ctaButtonStyle}
               onClick={this.handleCtaButtonClick}
             >
