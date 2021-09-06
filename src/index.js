@@ -81,6 +81,7 @@ class PhoneInput extends React.Component {
     enableClickOutside: PropTypes.bool,
     showDropdown: PropTypes.bool,
     showCtaButton: PropTypes.bool,
+    ctaButtonEnabled: PropTypes.bool,
 
     onChange: PropTypes.func,
     onFocus: PropTypes.func,
@@ -157,6 +158,7 @@ class PhoneInput extends React.Component {
     enableClickOutside: true,
     showDropdown: false,
     showCtaButton: false,
+    ctaButtonEnabled: false,
 
     isValid: true, // (value, selectedCountry, onlyCountries, hiddenAreaCodes) => true | false | 'Message'
     defaultErrorMessage: '',
@@ -1270,13 +1272,12 @@ class PhoneInput extends React.Component {
         {showCtaButton && (
           <div className={ctaButtonClasses}>
             <button
-              aria-disabled={!isValidValue}
-              disabled={!isValidValue}
+              aria-disabled={this.props.ctaButtonEnabled}
+              disabled={this.props.ctaButtonEnabled}
               style={this.props.ctaButtonStyle}
               onClick={this.handleCtaButtonClick}
-            >
-              {ctaButtonLabel}
-            </button>
+              dangerouslySetInnerHTML={{ __html: ctaButtonLabel}}
+            />
           </div>
         )}
       </div>
