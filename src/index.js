@@ -1272,8 +1272,8 @@ class PhoneInput extends React.Component {
         {showCtaButton && (
           <div className={ctaButtonClasses}>
             <button
-              aria-disabled={this.props.ctaButtonEnabled}
-              disabled={this.props.ctaButtonEnabled}
+              aria-disabled={!isValidValue}
+              disabled={!isValidValue}
               style={this.props.ctaButtonStyle}
               onClick={this.handleCtaButtonClick}
               dangerouslySetInnerHTML={{ __html: ctaButtonLabel}}
