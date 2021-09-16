@@ -1235,6 +1235,7 @@ class PhoneInput extends React.Component {
           placeholder={this.props.placeholder}
           disabled={this.props.disabled}
           type="tel"
+          autocomplete="on"
           {...this.props.inputProps}
         />
 
